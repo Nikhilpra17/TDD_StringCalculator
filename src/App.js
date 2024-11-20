@@ -1,7 +1,9 @@
+import Calculator from "./components/Calculator";
+
 function App() {
   return (
     <div className="App">
-      <h1 className="text-blue-800 font-extrabold ">Hello JS</h1>
+      <Calculator />
     </div>
   );
 }
