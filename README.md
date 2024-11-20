@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# String Calculator with TDD and React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![String Calculator Demo](/demo.gif)
 
-## Available Scripts
+A web-based **String Calculator** application built using **React** and **Tailwind CSS**, following **Test-Driven Development (TDD)** principles. This project demonstrates modular, maintainable code with a focus on readability, reusability, and testability using **Jest** for unit testing.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+**🚀 Features**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-  Add numbers from a comma-separated string input.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-  Supports multiple delimiters (e.g., ,, \n, custom delimiters like //;).
 
-### `npm test`
+-  Handles negative numbers with clear error messages.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-  Dynamic UI for user interaction and result display.
 
-### `npm run build`
+-  Responsive design using Tailwind CSS.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-  TDD approach with comprehensive Jest test cases.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-  Deployed for public access.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+**🛠️ Project Setup Instructions**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Prerequisites**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ensure you have the following installed on your system:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-  Node.js (v14 or later)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-  npm or yarn
 
-## Learn More
+**Installation Steps**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1.  Clone the repository:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2.  Install dependencies:
 
-### Code Splitting
+3.  Run tests:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4.  Start the development server:
 
-### Analyzing the Bundle Size
+5.  Open the app in your browser:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+**📋 Explanation of Approach**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**TDD Workflow**
 
-### Advanced Configuration
+1.  **Understand the Requirements**: Break down the functionality into incremental steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2.  **Write a Failing Test**: Start by writing test cases for the smallest feature (e.g., an empty string returns 0).
 
-### Deployment
+3.  **Implement Code to Pass the Test**: Write the minimal logic needed to make the test pass.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+4.  **Refactor the Code**: Improve code readability, structure, and reusability without breaking functionality.
 
-### `npm run build` fails to minify
+5.  Repeat for additional features, like:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-  Handling multiple numbers.
+
+-  Supporting custom delimiters.
+
+-  Handling errors with negative numbers.
+
+6.  **Frontend Integration**: Design a user-friendly interface and connect it with the logic.
+---
+
+**Code Structure**
+
+-  src/components/Calculator.jsx: Main React component for UI and state management.
+
+-  src/utils/add.js: Core function for string parsing and calculation.
+
+-  src/utils/add.test.js: Comprehensive Jest test cases.
+
+-  tailwind.config.js: Custom configuration for Tailwind CSS.
+
+---
+
+**🌐 Deployed Application**
+
+Access the deployed application here: [String Calculator](https://tdd-string-calculator-ten.vercel.app/)
+
+---
+
+**🖌️ Design**
+
+**Highlights**
+
+-  Clean, responsive design using Tailwind CSS.
+
+-  Divided UI:
+
+-  **Left Section**: Title, input field, example usage text, and calculate button.
+
+-  **Right Section**: Result displayed with bold and visually appealing effects.
+
+-  Dynamic error and result handling.
+
+---
+
+**🧪 Testing**
+
+**Test Cases**
+
+-  Handles empty string input ("") → 0.
+
+-  Single number input ("1") → 1.
+
+-  Multiple numbers input ("1,2") → 3.
+
+-  Custom delimiters ("//;\n1;2") → 3.
+
+-  Throws errors for negative numbers ("-1,2") → Error: negative numbers not allowed: -1.
+
+Run tests using:
+
+```ruby
+npm test
+```
