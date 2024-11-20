@@ -20,3 +20,11 @@ test("returns the sum of multiple numbers", () => {
 test("handles newlines between numbers", () => {
   expect(add("1\n2,3")).toBe(6);
 });
+
+test("throws error for a single negative number", () => {
+  expect(() => add("-1")).toThrow("Negative numbers not allowed: -1");
+});
+
+test("throws error for multiple negative numbers", () => {
+  expect(() => add("1,-2,-3")).toThrow("Negative numbers not allowed: -2, -3");
+});
